@@ -14,3 +14,8 @@ RDD can contains
 - Collection of single values. For example, lines of texts
 - Collection of key value pairs. For example, (1, x), (2, y), ...
   - To use key value methods such as mapValues(lambda function), reduceByKey(lambda function)
+
+## map() vs. flatMap()
+
+- map() transforms each element of an RDD into one new element.
+- flatMap() can create many new elements from each one.
