@@ -19,3 +19,11 @@ RDD can contains
 
 - map() transforms each element of an RDD into one new element.
 - flatMap() can create many new elements from each one.
+
+## DataFrame
+
+The trend in Spark is to use RDDs less and DataFrames more because it's compatible with MLLib and Spark Streaming, and
+also it allows users to run query to data.
+DataFrame is a collection of Row objects, a structured data object extending RDD, can run SQL and have a schema which leads to more efficient storage.
+Use SparkSession instead of SparkContext
+In Spark 2+, DataFrame is a DataSet of Row objects.
