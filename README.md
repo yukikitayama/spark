@@ -24,6 +24,13 @@ RDD can contains
 
 The trend in Spark is to use RDDs less and DataFrames more because it's compatible with MLLib and Spark Streaming, and
 also it allows users to run query to data.
+
 DataFrame is a collection of Row objects, a structured data object extending RDD, can run SQL and have a schema which leads to more efficient storage.
+
 Use SparkSession instead of SparkContext
+
 In Spark 2+, DataFrame is a DataSet of Row objects.
+
+It's a good practice to discard the unnecessary information as early as possible to optimize cluster resource.
+
+For example, use select('COLUMN NAME') to limit the columns only you need.
