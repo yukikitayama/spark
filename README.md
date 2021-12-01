@@ -52,7 +52,19 @@ For example, use select('COLUMN NAME') to limit the columns only you need.
 - Import it by `from pyspark.sql import functions as func`
 - func.explode() explodes columns into rows, similar to flatmap. Each data horizontally in columns will be rows 
   vertically
+- [Aggregate, apply function, and rename the column](https://github.com/yukikitayama/spark/blob/main/exercise/total_amount_by_customer_dataframe.py)
 
 ## Schema
 
 - Use it to provide column names if the data doesn't have a header.
+
+## Mapping
+
+- Keep a dictionary loaded in the driver program
+- Use `sc.broadcast()` to broadcast objects to the executors
+- Use `BROADCASTED_OBJECT.value()` to get the object back.
+
+## UDF
+
+- [UDF example](https://github.com/yukikitayama/spark/blob/main/activity/popular-movies-nice-dataframe.py)
+
