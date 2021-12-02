@@ -46,6 +46,8 @@ For example, use select('COLUMN NAME') to limit the columns only you need.
 
 - DataFrame is a good choice if the data is structured data.
 - withColumn(NAME, DATA) creates a new column.
+- Filter `DF.filter(func.col('COLUMN_NAME') == 'VALUE')`
+- Join `DF.join(OTHER_DF, 'COMMON_COLUMN_NAME')`
 
 ## SQL Functions
 
