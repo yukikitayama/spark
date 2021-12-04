@@ -70,3 +70,8 @@ For example, use select('COLUMN NAME') to limit the columns only you need.
 
 - [UDF example](https://github.com/yukikitayama/spark/blob/main/activity/popular-movies-nice-dataframe.py)
 
+## Accumulator
+
+- Shared variable by executors in a cluster
+
+
