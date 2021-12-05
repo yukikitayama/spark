@@ -74,4 +74,17 @@ For example, use select('COLUMN NAME') to limit the columns only you need.
 
 - Shared variable by executors in a cluster
 
+## Caching
 
+- When you do multiple actions on a dataframe, you should cache it to avoid re-evaluating the entire dataframe all over
+  again
+- .cache()
+  - keep it in memory
+- .persist()
+  - Optionally let you cache it to disk instead of memory, useful when a node fails.
+
+## Configuration
+
+- `SparkSession.builder.master('local[*]')`
+  - `local[*]` means use every CPU core on a local system to execute a job. It makes sense to use if in your laptop, but
+    in a production cluster, it doesn't utilize other machines in a cluster.
