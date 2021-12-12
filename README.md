@@ -88,3 +88,11 @@ For example, use select('COLUMN NAME') to limit the columns only you need.
 - `SparkSession.builder.master('local[*]')`
   - `local[*]` means use every CPU core on a local system to execute a job. It makes sense to use if in your laptop, but
     in a production cluster, it doesn't utilize other machines in a cluster.
+
+## Partitioning
+
+- Using `.partitionBy()` on an RDD before running a large operation benefits from partitioning.
+- Should consider use it if you use any of the following methods
+  - `join(), cogroup(), groupWith(), join(), leftOuterJoin(), rightOuterJoin(), groupByKey(), reduceByKey(),
+    combineByKey(), lookup()`
+- `partitionBy(100)` is a reasonable start if you have 5 to 10 computers
