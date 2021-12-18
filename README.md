@@ -96,3 +96,13 @@ For example, use select('COLUMN NAME') to limit the columns only you need.
   - `join(), cogroup(), groupWith(), join(), leftOuterJoin(), rightOuterJoin(), groupByKey(), reduceByKey(),
     combineByKey(), lookup()`
 - `partitionBy(100)` is a reasonable start if you have 5 to 10 computers
+
+## Machine Learning Library
+
+- xxx
+
+## Spark Streaming
+
+- Dstream
+  - Objects broken up the stream into distinct RDD's
+  - Micro batch
